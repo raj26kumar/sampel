@@ -1,7 +1,42 @@
 <!doctype html>
 <html lang="en">
   <head>
+
+
+        <!--rudderstack-->
+        <script>
+          rudderanalytics = window.rudderanalytics = [];
+      
+          var  methods = [
+              "load",
+              "page",
+              "track",
+              "identify",
+              "alias",
+              "group",
+              "ready",
+              "reset",
+              "getAnonymousId",
+          "setAnonymousId"
+          ];
+      
+          for (var i = 0; i < methods.length; i++) {
+                var method = methods[i];
+                rudderanalytics[method] = function (methodName) {
+                      return function () {
+                            rudderanalytics.push([methodName].concat(Array.prototype.slice.call(arguments)));
+                      };
+                    }(method);
+          }
+          rudderanalytics.load("1wZbK5YCoaNhhkQWTfJMKlDWVNB", "https://linkfieldsstt.dataplane.rudderstack.com");
+          //For example,
+          //rudderanalytics.load("1Qb1F3jSWv0eKFBPZcrM7ypgjVo", "http://localhost:8080");
+          rudderanalytics.page();
+      </script>
+      
+      <script async src="https://cdn.rudderlabs.com/v1/rudder-analytics.min.js"></script>
     
+      
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,38 +44,7 @@
     <!-- Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <!--rudderstack-->
-    <script>
-    rudderanalytics = window.rudderanalytics = [];
 
-    var  methods = [
-        "load",
-        "page",
-        "track",
-        "identify",
-        "alias",
-        "group",
-        "ready",
-        "reset",
-        "getAnonymousId",
-    "setAnonymousId"
-    ];
-
-    for (var i = 0; i < methods.length; i++) {
-          var method = methods[i];
-          rudderanalytics[method] = function (methodName) {
-                return function () {
-                      rudderanalytics.push([methodName].concat(Array.prototype.slice.call(arguments)));
-                };
-              }(method);
-    }
-    rudderanalytics.load("1wZbK5YCoaNhhkQWTfJMKlDWVNB", "https://linkfieldsstt.dataplane.rudderstack.com");
-    //For example,
-    //rudderanalytics.load("1Qb1F3jSWv0eKFBPZcrM7ypgjVo", "http://localhost:8080");
-    rudderanalytics.page();
-</script>
-
-<script async src="https://cdn.rudderlabs.com/v1/rudder-analytics.min.js"></script>
 
     <title>Welcome</title>
 
