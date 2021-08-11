@@ -2,41 +2,14 @@
 <html lang="en">
   <head>
 
+    <!--rudderstack -->
+    <script> 
+    rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track","identify","alias","group","ready","reset","getAnonymousId","setAnonymousId"],i=0;i<methods.length;i++){var method=methods[i];rudderanalytics[method]=function(a){return function(){rudderanalytics.push([a].concat(Array.prototype.slice.call(arguments)))}}(method)}rudderanalytics.load("1wZbK1tGvX4hqo6Tn8uvpcd4UzL","https://linkfieldsstt.dataplane.rudderstack.com"),rudderanalytics.page();
+    </script>
+      
+    <script src="https://cdn.rudderlabs.com/v1/rudder-analytics.min.js"></script>
 
-        <!--rudderstack-->
-        <script>
-          rudderanalytics = window.rudderanalytics = [];
-      
-          var  methods = [
-              "load",
-              "page",
-              "track",
-              "identify",
-              "alias",
-              "group",
-              "ready",
-              "reset",
-              "getAnonymousId",
-          "setAnonymousId"
-          ];
-      
-          for (var i = 0; i < methods.length; i++) {
-                var method = methods[i];
-                rudderanalytics[method] = function (methodName) {
-                      return function () {
-                            rudderanalytics.push([methodName].concat(Array.prototype.slice.call(arguments)));
-                      };
-                    }(method);
-          }
-          rudderanalytics.load("1wZbK5YCoaNhhkQWTfJMKlDWVNB", "https://linkfieldsstt.dataplane.rudderstack.com");
-          //For example,
-          //rudderanalytics.load("1Qb1F3jSWv0eKFBPZcrM7ypgjVo", "http://localhost:8080");
-          rudderanalytics.page();
-      </script>
-      
-      <script async src="https://cdn.rudderlabs.com/v1/rudder-analytics.min.js"></script>
-    
-      
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,7 +19,9 @@
 
 
 
-    <title>Welcome</title>
+
+
+  <title>Welcome</title>
 
 </head>
 
