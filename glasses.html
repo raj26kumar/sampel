@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
- <!--rudderstack -->
+
  
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,11 +11,16 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <title>Click 1</title>
+    <title>Click 1</title> 
+    
+    <!--rudderstack -->
     <script> 
   rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track","identify","alias","group","ready","reset","getAnonymousId","setAnonymousId"],i=0;i<methods.length;i++){var method=methods[i];rudderanalytics[method]=function(a){return function(){rudderanalytics.push([a].concat(Array.prototype.slice.call(arguments)))}}(method)}rudderanalytics.load("1wZbK5YCoaNhhkQWTfJMKlDWVNB","https://linkfieldsstt.dataplane.rudderstack.com"),rudderanalytics.page({
  search :window.location.href });
    
+  [[RSClient sharedInstance] screen:@"Main" 
+                properties:@{@"prop_key" : @"prop_value"}];
+      
   </script>
     
  
